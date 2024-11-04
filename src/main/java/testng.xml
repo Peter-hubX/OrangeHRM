@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+    </listeners>
+
+    <test name="Login Test">
+        <classes>
+            <class name="Tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Dashboard Test">
+        <classes>
+            <class name="Tests.DashboardTest">
+                <methods>
+                    <include name="DashboardTest1"/>
+                    <!-- Excluding the PIM method by only including DashboardTest1 -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Adding Person Test">
+        <classes>
+            <class name="Tests.AddingPageTest"/>
+        </classes>
+    </test>
+
+</suite>
