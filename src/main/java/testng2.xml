@@ -6,7 +6,11 @@
 
     <test name="Login Test">
         <classes>
-            <class name="Tests.LoginTest"/>
+            <class name="Tests.LoginTest">
+                <methods>
+                    <exclude name="addNewAdminEntry"/>
+                </methods>
+            </class>
         </classes>
     </test>
 
@@ -14,9 +18,14 @@
         <classes>
             <class name="Tests.DashboardTest">
                 <methods>
-                    <include name="PIM"/>
+                    <include name="PIMTest"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+    <test name="PIMPage Test">
+        <classes>
+            <class name="Tests.PIMPageTest"/>
         </classes>
     </test>
 

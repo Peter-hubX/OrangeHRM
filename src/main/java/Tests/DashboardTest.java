@@ -35,7 +35,7 @@ public class DashboardTest extends TestBase {
     }
     @Test
     @Description("Test for navigating to the PIM page from the Dashboard")
-    public void PIM() throws InterruptedException
+    public void PIMTest() throws InterruptedException
     {
         DashboardObject = new DashboardPage(driver);
         DashboardObject.PIMPage();
