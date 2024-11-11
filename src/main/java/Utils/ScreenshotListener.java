@@ -7,7 +7,8 @@ import org.testng.ITestResult;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -15,6 +16,8 @@ import java.util.Date;
 
 public class ScreenshotListener implements ITestListener
 {
+    private static final Logger logger = LoggerFactory.getLogger(ScreenshotListener.class);
+
     @Override
     public void onTestFailure(ITestResult result)
     {
