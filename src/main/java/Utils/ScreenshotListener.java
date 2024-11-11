@@ -2,7 +2,6 @@ package Utils;
 
 import Tests.TestBase;
 import org.apache.commons.io.FileUtils;
-import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.openqa.selenium.OutputType;
@@ -27,9 +26,11 @@ public class ScreenshotListener implements ITestListener
             try
             {
                 FileUtils.copyFile(source, new File(System.getProperty("user.dir") + "/ScreenShots/" + result.getName() + "_" + timestamp + ".png"));
+                logger.info("Screenshot captured for test failure: " + result.getName());
+
             } catch (IOException e)
             {
-                e.printStackTrace();
+                logger.error("Failed to save screenshot for test failure: " + result.getName(), e);
             }
         }
     }

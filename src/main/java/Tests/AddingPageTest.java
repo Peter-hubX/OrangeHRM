@@ -1,19 +1,12 @@
 package Tests;
 
 import Pages.AdminPage;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import Pages.AddingPage;
-
-import java.io.IOException;
 import java.util.Random;
-import java.io.File;
-import org.apache.commons.io.FileUtils;
+
 
 public class AddingPageTest extends TestBase {
     protected int count;
