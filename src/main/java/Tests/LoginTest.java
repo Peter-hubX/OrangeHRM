@@ -38,6 +38,11 @@ public class LoginTest extends TestBase {
         LoginPageObject.LoginData(username, password);
         Thread.sleep(3000);
     }
+    @Step("Click on Login Button")
+    private void ClickLoginButton() throws InterruptedException
+    {
+        LoginPageObject.clickLoginButton();
+    }
 
     @Step("Navigate to the Dashboard page")
     private void navigateToDashboard() {

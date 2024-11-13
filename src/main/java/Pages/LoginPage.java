@@ -35,11 +35,14 @@ public class LoginPage extends PageBase
 	    wait.until(ExpectedConditions.visibilityOf(Username));
 		setTextElementText(Username, "Admin");
 		setTextElementText(Password, "admin123");
+
+	  //  wait.until(ExpectedConditions.visibilityOf(Admin));
+		//clickButton(Admin);
+	}
+	public void clickLoginButton() throws InterruptedException {
 		Thread.sleep(2000);
 		clickButton(LoginButton);
 		Thread.sleep(2000);
-	  //  wait.until(ExpectedConditions.visibilityOf(Admin));
-		//clickButton(Admin);
 	}
 
 
