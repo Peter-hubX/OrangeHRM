@@ -12,7 +12,6 @@ import Pages.AdminPage;
 public class LoginTest extends TestBase {
 
     LoginPage LoginPageObject; 
-    PageBase PageBaseObject;
     DashboardPage DashboardObject;
     AdminPage AdminPageObject;
 
