@@ -31,7 +31,6 @@ public class TestBase extends AbstractTestNGCucumberTests
 	public void BeforeTesting() 
 	{
         WebDriverManager.chromedriver().setup();
-		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	}
@@ -43,5 +42,6 @@ public class TestBase extends AbstractTestNGCucumberTests
 			File source = TakeSS.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(source, new File(System.getProperty("user.dir")+"/ScreenShots/"+result.getName()+".png"));
 		}
+
 	}}
 

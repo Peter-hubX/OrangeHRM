@@ -121,12 +121,6 @@
             <version>30.0.0</version>
         </dependency>
 
-
-
-
-
-
-        <!-- Replace with the correct groupId/artifactId/version for the Training dependency -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
