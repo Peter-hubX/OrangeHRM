@@ -32,7 +32,7 @@
     <repositories>
         <repository>
             <id>internal-repo</id>
-            <url>http://your-repo-url/repository</url> <!-- Replace with the actual URL of your repository -->
+            <url>https://maven.pkg.github.com/Peter-hubX/OrangeHRM</url><!-- Replace with the actual URL of your repository -->
             <releases>
                 <enabled>true</enabled>
             </releases>

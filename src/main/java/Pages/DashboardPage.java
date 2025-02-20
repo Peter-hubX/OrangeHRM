@@ -15,9 +15,10 @@ public class DashboardPage extends PageBase
 	public DashboardPage(WebDriver driver)
 	{
 		super(driver);
+
 	}
 	
-	@FindBy(xpath = "//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name']")
+	@FindBy(xpath = "//span[text()='Admin']")
     WebElement Admin;
 
 	@FindBy(xpath = "//span[text()='PIM']")

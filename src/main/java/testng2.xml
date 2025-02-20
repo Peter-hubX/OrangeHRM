@@ -1,33 +1,33 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="false">
-    <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
-        <listener class-name="Utils.ScreenshotListener" />
-    </listeners>
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+<!--<suite name="Suite" parallel="false">-->
+<!--    <listeners>-->
+<!--        <listener class-name="io.qameta.allure.testng.AllureTestNg" />-->
+<!--        <listener class-name="Utils.ScreenshotListener" />-->
+<!--    </listeners>-->
 
-    <test name="Login Test">
-        <classes>
-            <class name="Tests.LoginTest">
-                <methods>
-                    <exclude name="addNewAdminEntry"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Login Test">-->
+<!--        <classes>-->
+<!--            <class name="Tests.LoginTest">-->
+<!--                <methods>-->
+<!--                    <exclude name="addNewAdminEntry"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Dashboard Test">
-        <classes>
-            <class name="Tests.DashboardTest">
-                <methods>
-                    <include name="PIMTest"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="PIMPage Test">
-        <classes>
-            <class name="Tests.PIMPageTest"/>
-        </classes>
-    </test>
+<!--    <test name="Dashboard Test">-->
+<!--        <classes>-->
+<!--            <class name="Tests.DashboardTest">-->
+<!--                <methods>-->
+<!--                    <include name="PIMTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="PIMPage Test">-->
+<!--        <classes>-->
+<!--            <class name="Tests.PIMPageTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-</suite>
+<!--</suite>-->

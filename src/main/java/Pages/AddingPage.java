@@ -3,6 +3,8 @@ package Pages;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,7 +56,13 @@ public class AddingPage extends PageBase
      
      @FindBy(xpath="//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")
      WebElement SaveButton;
-     
+
+     @FindBy(xpath = "//div[@class='orangehrm-container']")
+     WebElement Table;
+
+     @FindBy(xpath = "//div[@class='orangehrm-container']//div[@role='row']")
+     List<WebElement>tableRows;
+
     public void UserRole(String optionToSelect) throws InterruptedException
     {
         // Click the dropdown arrow to open the dropdown menu
@@ -122,7 +130,9 @@ public class AddingPage extends PageBase
      public void Save() 
      {
     	 clickButton(SaveButton);
-     }
+     }}
+
+
      
 
-}
+

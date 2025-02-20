@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -28,8 +29,9 @@ public class TestBase extends AbstractTestNGCucumberTests
 		return driver;
 	}
 	@BeforeSuite
-	public void BeforeTesting() 
+	public void BeforeTesting()
 	{
+
         WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

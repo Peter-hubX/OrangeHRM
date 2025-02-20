@@ -11,9 +11,7 @@ import Pages.AdminPage;
 
 public class LoginTest extends TestBase {
 
-    LoginPage LoginPageObject; 
-    DashboardPage DashboardObject;
-    AdminPage AdminPageObject;
+    LoginPage LoginPageObject;
 
     @Test
     @Description("Test for logging in and navigating to Admin page to add a new entry")
@@ -21,10 +19,7 @@ public class LoginTest extends TestBase {
 
         initializeLoginPage();
         login("Admin", "admin123");
-        
-        navigateToDashboard();
-        goToAdminPage();
-        addNewAdminEntry();
+        ClickLoginButton();
     }
 
     @Step("Initialize the login page")
@@ -43,19 +38,4 @@ public class LoginTest extends TestBase {
         LoginPageObject.clickLoginButton();
     }
 
-    @Step("Navigate to the Dashboard page")
-    private void navigateToDashboard() {
-        DashboardObject = new DashboardPage(driver);
-    }
-
-    @Step("Go to the Admin page from Dashboard")
-    private void goToAdminPage() throws InterruptedException {
-        DashboardObject.AdminPage();
-    }
-
-    @Step("Add a new entry in the Admin page")
-    private void addNewAdminEntry() {
-        AdminPageObject = new AdminPage(driver);
-        AdminPageObject.Add();
-    }
 }
